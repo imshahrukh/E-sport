@@ -1,0 +1,26 @@
+.prd-details {
+  border-bottom: 1px solid rgba(148, 142, 142, 0.308);
+  padding-bottom: 1rem;
+  /* color: rgb(19, 238, 238); */
+}
+.prd-details--status {
+  border-radius: 3px;
+  color: white;
+}
+.status--success {
+  background-color: rgb(19, 238, 238);
+}
+.status--close {
+  background-color: rgb(250, 74, 74);
+}
+.btn-prd {
+  width: 100px;
+  border-radius: 3px;
+  color: antiquewhite;
+  cursor: pointer;
+  background-color: crimson;
+}
+.btn-prd:hover {
+  /* color: black; */
+  background-color: blue;
+}
