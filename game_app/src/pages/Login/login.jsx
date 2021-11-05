@@ -25,15 +25,25 @@ export const Login = (props) => {
       password: password,
     });
     console.log(data);
-    setAuthUser(data.access_token);
-    localStorage.setItem("access_token", data.access_token);
-    localStorage.setItem("user", data.member[0]._id);
+    if(data.total ===0){
+      alert("email or password is Invalid  ")
+      history.push("/login");
+
+    }
+    else{
+      setAuthUser(data.access_token);
+      localStorage.setItem("access_token", data.access_token);
+      localStorage.setItem("user", data.member[0]._id);
+    }
+ 
+
     // return true;
   };
   useEffect(() => {
     // if Login dashboard
 
     console.log(localStorage.getItem("user"));
+
     if (localStorage.getItem("user") !== "") {
       history.push("/admin");
     }
